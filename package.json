@@ -1,0 +1,34 @@
+{
+  "name": "kuada_n_ly_h_zatzpancioli_a_organ_donation",
+  "version": "1.0.0",
+  "description": "Ontario Organ Donation Project",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "dependencies": "0.0.1",
+    "node-sass": "^4.11.0"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.0",
+    "gulp-sass": "^4.0.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/annapancioli/kuada_n_ly_h_zatzpancioli_a_organ_donation.git"
+  },
+  "keywords": [
+    "ontario",
+    "organ",
+    "donation",
+    "interactive",
+    "design"
+  ],
+  "author": "Anna Carolina Zatz Pancioli, Han Ly and Nathalia Miki Kuada",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/annapancioli/kuada_n_ly_h_zatzpancioli_a_organ_donation/issues"
+  },
+  "homepage": "https://github.com/annapancioli/kuada_n_ly_h_zatzpancioli_a_organ_donation#readme"
+}

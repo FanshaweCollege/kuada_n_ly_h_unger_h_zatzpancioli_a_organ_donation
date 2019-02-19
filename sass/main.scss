@@ -1,0 +1,110 @@
+@font-face {
+    font-family: 'open_sanslight';
+    src: url('../fonts/opensans-light-webfont.woff2') format('woff2'),
+         url('../fonts/opensans-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'open_sansregular';
+    src: url('../fonts/opensans-regular-webfont.woff2') format('woff2'),
+         url('../fonts/opensans-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body{
+    background-color: black;
+    color: white;
+    font-family: 'open_sanslight';
+}
+
+#loginContainer{
+    width: 400px;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 80px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    border: 1px solid white;
+}
+
+#dashContainer{
+    width: 800px;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 20px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+a{
+    text-decoration: underline;
+    color: white;
+}
+
+a:hover{
+    color: rgb(255, 136, 0);
+}
+
+h1{
+    text-align: center;
+    font-family: 'open_sansregular';
+}
+
+h2{
+    text-align: center;
+    padding-top: 20px;
+}
+
+ul li{
+    display: inline-block;
+    padding-top: 40px;
+    padding-right: 30px;
+    padding-left: 30px;
+}
+
+ul{
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+}
+
+form{
+    text-align: center;
+    padding-top: 40px;
+}
+
+textarea{
+    background: none;
+}
+
+label{
+    display: block;
+    padding-bottom: 20px;
+}
+
+#last_login{
+    text-align: center;
+    margin-top: 100px;
+}
+
+#greeting{
+    text-align: center;
+    color: rgb(255, 136, 0);
+}
+
+#error{
+    text-align: center;
+    padding-top: 20px;
+}
+
+#dashTitle{
+    margin-bottom: 40px;
+}
+
+#dashWelcome{
+    margin-bottom: 0px;
+}
