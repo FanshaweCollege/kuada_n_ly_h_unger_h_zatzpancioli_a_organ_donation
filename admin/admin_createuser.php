@@ -32,7 +32,7 @@
     <?php if(!empty($message)):?>
 		<p><?php echo $message;?></p>
 	<?php endif?>
-    <form action="adminCreateUser.php" method="POST">
+    <form action="admin_createuser.php" method="POST">
         <label for="first-name">First Name:</label>
         <input type="text" id="first-name" name="fname"><br><br>
         <label for="username">Username:</label>

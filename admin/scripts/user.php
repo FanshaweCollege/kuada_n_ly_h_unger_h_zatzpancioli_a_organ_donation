@@ -20,7 +20,7 @@ function createUser($fname,$username,$email){
 
 	$pass = generatePass();
 
-	$password = password_hash($pass, PASSWORD_DEFAULT);
+	$password =  password_hash($pass, PASSWORD_DEFAULT);
 
 	//insert new user info on database
 	$create_user_query = 'INSERT INTO tbl_user(user_fname,user_name,user_pass,user_email)';
