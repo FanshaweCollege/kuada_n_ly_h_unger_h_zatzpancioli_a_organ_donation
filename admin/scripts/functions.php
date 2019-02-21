@@ -26,7 +26,7 @@
 		  $message = 'Follow your account and login information:<br>
       Username: '.$username.'<br>
       Password: '.$pass.'<br>
-      To log in please go to www.ZatzPancioli_A_3014_r1/admin/admin_login.php';
+      To log in please go to www.kuada_n_ly_h_zatzpancioli_a_organ_donation/admin/admin_login.php';
 
       mail($to,$subject,$message);
 

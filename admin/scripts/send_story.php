@@ -4,11 +4,10 @@ function sendStory($name,$email,$story){
 
     include('connect.php');
 
-  $check_info_query = "SELECT COUNT(*) FROM tbl_story WHERE story_name = :sname AND story_email = :email";
+  $check_info_query = "SELECT COUNT(*) FROM tbl_story WHERE story_email = :email";
 	$check_info_exist = $pdo->prepare($check_info_query );
 	$check_info_exist->execute(
 	array(
-    ':sname'=> $name,
     ':email'=> $email
 	)
     );
@@ -24,30 +23,20 @@ function sendStory($name,$email,$story){
 	$create_story_set->execute(
 		array(
 			':sname'=>$name,
-            ':email'=>$email,
-            ':story'=>$story
+      ':email'=>$email,
+      ':story'=>$story
 		)
     );
     
     if($create_story_set->rowCount()){
 
-		$message = 'Thank you for sending us your story!';
-		return $message;
+      $message = 'Thank you for sending us your story!';
+      return $message;
 		
     }else{
       $message = "Story couldn't be sent!";
       return $message;
     }
-
-
-    /*$to = 'admin@lifegoeson.com';
-    $subject = "'.$name.' shared a story";
-    $message = 
-    'Name: '.$name.'<br>
-    Email: '.$email.'<br>
-    Story: '.$story.';'
-
-    mail($to,$subject,$message);*/
       
   }
     
