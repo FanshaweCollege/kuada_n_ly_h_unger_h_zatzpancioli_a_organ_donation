@@ -39,4 +39,3 @@
         <p id="error"><?php echo $message;?></p>
     <?php endif?>
 </body>
-</html>

@@ -40,6 +40,7 @@
         <label for="email">Email:</label>
         <input type="email" id="email" name="email"><br><br>
         <button type="submit" name="submit">Create User</button>
+    </form>
         
 </body>
 </html>
