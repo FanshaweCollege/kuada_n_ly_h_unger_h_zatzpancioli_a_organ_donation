@@ -1,6 +1,8 @@
 <?php
 	require_once('scripts/config.php');
 	confirm_logged_in();
+	greeting();
+	$message = greeting();
 ?>
 
 <!doctype html>
