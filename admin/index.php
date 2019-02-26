@@ -3,6 +3,14 @@
 	confirm_logged_in();
 	greeting();
 	$message = greeting();
+
+	if (isset($_SESSION['user_date']) && 
+		(time() - $_SESSION['user_date'] > 600)) {
+		session_destroy();   
+		session_unset();  
+	 }
+	 
+	$_SESSION['user_date'] = time();
 ?>
 
 <!doctype html>
@@ -30,9 +38,6 @@
 				<li><a href="scripts/caller.php?caller_id=logout">Sign Out</a></li>
 			</ul>
 		</nav>
-		<div id="last_login">
-			<p>Last login: <?php echo $_SESSION['user_date'] ?></p> <!-- shows the date on the screen -->
-		</div>
 	</div>
 
 </body>
