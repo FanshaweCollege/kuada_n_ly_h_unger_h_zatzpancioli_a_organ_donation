@@ -1,9 +1,15 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto|Shadows+Into+Light');
+@import '_vars';
 
 html, body {
   margin: 0;
   height: 100%;
+  scroll-behavior: smooth; 
 }
+
+
+
+/*MENU*/
 
 .top-nav {
   display: flex;
@@ -62,6 +68,7 @@ html, body {
   width: 30px;
   transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
   border-radius: 2px;
+  margin-top: 30px;
 }
 
 .menu-button::before {
@@ -92,6 +99,7 @@ html, body {
   .menu-button-container {
     display: flex;
   }
+  
   .menu {
     position: absolute;
     top: 0;
@@ -112,7 +120,7 @@ html, body {
   }
   #menu-toggle:checked ~ .menu li {
     border: 1px solid #161616;
-    height: 2.5em;
+    height: 2.8em;
     padding: 0.5em;
     transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
   }
@@ -125,11 +133,6 @@ html, body {
     color: white;
     background-color: #161616;
     overflow: hidden;
-  }
-
-
-  .menu > li:not(:last-child) {
-    border-bottom: 1px solid #161616;
   }
 }
 
@@ -148,6 +151,10 @@ a{
     }
 }
 
+
+
+/*BANNER*/
+
 .greenBox{
     height: 28px;
     background-color: #2fa99f;
@@ -157,56 +164,59 @@ a{
     width: 100%;
 }
 
+
+
+/*VIDEO*/
+
 .videoBox{
     background-color: #e6e6e6;
 }
 
 #video{
-    width: 80%;
     margin-top: 10%;
-    margin-left: 10%;
 }
 
 .youCan{
     color: white;
     text-align: center;
+    background-color: #2fa99f;
 }
 
-@media (max-width: 700px) {
-    #youCanBox{
-    margin-right: 10%;
-    margin-left: 10%;
-    margin-top: 10%;
-    margin-bottom: 5%;
-    background-color: #2fa99f;
-    padding: 10% 5% 5% 5%;
-}
+#youCanBox{
+    margin-top: 15%;
+    padding-bottom: 15%;
 }
 
 @media (min-width: 700px) {
+    .youCan{
+        border-radius: 00px 0px 10px 10px;
+    }
     #youCanBox{
-    margin-right: 10%;
-    background-color: #2fa99f;
-    padding: 20% 5% 15% 5%;
-    border-radius: 0px 0px 10px 10px;
+        margin-top: 30%;
+    }
 }
+
+@media (max-width: 700px) {
+    #video{
+        margin-bottom: 10%;
+    }
 }
 
 .youCan h1{
     font-family: 'Open Sans', Helvetica, Arial, sans-serif;
     font-weight: bold;
-    font-size: calc(20px + 6 * ((100vw - 320px) / 680));
+    font-size: calc(15px + 2 * ((100vw - 320px) / 680));
 }
 
 .youCan h2{
     font-family: 'Shadows Into Light', cursive;
-    font-size: calc(24px + 6 * ((100vw - 320px) / 680));
+    font-size: calc(24px + 2 * ((100vw - 320px) / 680));
 }
 
 .youCan p{
     font-family: 'Open Sans', Helvetica, Arial, sans-serif;
     font-weight: bold;
-    font-size: calc(14px + 2 * ((100vw - 320px) / 680));
+    font-size: calc(12px + 2 * ((100vw - 320px) / 680));
 }
 
 #beat{
@@ -214,13 +224,15 @@ a{
     /*visibility: hidden;*/
 }
 
-
-
 @media (max-width: 700px) {
     #beat{
         margin-bottom: 2%;
     }
 }
+
+
+
+/*SIGN UP*/
 
 .signUp{
     background-color: #ed5621;
@@ -229,7 +241,7 @@ a{
 
 .signUp h2{
     font-family: 'Roboto', Helvetica, Arial, sans-serif;
-    font-size: calc(24px + 2 * ((100vw - 320px) / 680));
+    font-size: calc(18px + 2 * ((100vw - 320px) / 680));
     text-align: center;
     color: white;
     padding-top: 7px;
@@ -239,119 +251,65 @@ a{
     background-color: #2fa99f;
 }
 
-.aboutBox{
+
+
+/*DONATION*/
+
+.donationBox{
     background: url(../images/dark_wall.png) 100% repeat;
-    padding-bottom: 40px;
-    padding-top: 40px;
+    padding-bottom: 50px;
+    padding-top: 50px;
 }
 
-.iconBox{
-    padding-bottom: 5%;
-    padding-top: 5%;
+.donationBox h1{
+    text-align: center;
+    font-family: 'Roboto', Helvetica, Arial, sans-serif;
+    font-size: calc(20px + 2 * ((100vw - 320px) / 680));
+    color: white;
+    padding: 30px;
 }
 
-.icon{
-    width: 25%;
-    display: block;
-    margin: auto;
-}
-
-.aboutBox h2{
+.donationBox h2{
     text-align: center;
     font-family: 'Shadows Into Light', cursive;
-    font-size: calc(24px + 2 * ((100vw - 320px) / 680));
+    font-size: calc(20px + 2 * ((100vw - 320px) / 680));
     color: white;
     border-bottom: 1.5px solid #ed5621;
-    width: 150px;
+    width: 190px;
     display: block;
     margin: auto;
-    padding-top: 15px;
 }
 
-.aboutBox p{
+.donationBox p{
     text-align: justify;
     font-family: 'Roboto Light', Helvetica, Arial, sans-serif;
-    font-size: calc(14px + 2 * ((100vw - 320px) / 680));
+    font-size: calc(11px + 2 * ((100vw - 320px) / 680));
     color: white;
-    width: 80%;    
+    width: 70%;    
     display: block;
     margin: auto;
-    padding-top: 15px;
+    padding-top: 5%;
+ 
+}
+
+#organs{
+    width: 100%;
+    margin-top: 15px;
+    /*visibility: hidden;*/
 }
 
 @media (max-width: 700px) {
-    .icon{
-        width: 20%;
+    .donationBox h2{
+       padding-top: 5%;
+    }
+    #organs{
+       margin-top: 5%;
     }
 }
 
-.factsBox{
-    background: url(../images/facts_bg.jpg) 50% no-repeat;
-    height: 87vh;
-    background-image: center;
-    background-position: center;
-    background-size: cover;
-}
 
-.facts{
-    padding-top: 50px;
-    padding-bottom: 50px;
-}
 
-.facts p{
-    text-align: justify;
-    font-family: 'Roboto Light', Helvetica, Arial, sans-serif;
-    font-size: calc(14px + 2 * ((100vw - 320px) / 680));
-    color: #161616;
-    width: 80%;    
-    margin: 0 auto;
-    padding-top: 15px;
-}
-
-.factsBg{
-    /*background-color: #e6e6e6;*/
-    background-color: rgba(230, 230, 230, 0.7);
-    margin-top: 5%;
-    margin-bottom: 5%;
-    height: 70%; 
-}
-
-.factsBg h2{
-    text-align: center;
-    font-family: 'Shadows Into Light', cursive;
-    font-size: calc(24px + 4 * ((100vw - 320px) / 680));
-    color: #161616;
-    border-bottom: 1.5px solid #2fa99f;
-    width: 150px;
-    display: block;
-    margin: auto;
-    padding-top: 15px;
-}
-
-@media (max-width: 700px) {
-    .factsBox{
-        height: 110vh;
-    }    
-    .facts{
-        padding-top: 15px;
-        padding-bottom: 15px;
-    }
-    .factsBg{
-        margin-top: 10%;
-        padding-top: 15px;
-        padding-bottom: 15px;
-        height: 80%; 
-    }
-    .facts p{
-        text-align: justify;
-        font-family: 'Roboto Light', Helvetica, Arial, sans-serif;
-        font-size: calc(14px + 2 * ((100vw - 320px) / 680));
-        color: #161616;
-        width: 80%;    
-        margin: 0 auto;
-        padding-top: 15px;
-    }
-}
+/*SHARE YOUR STORY*/
 
 .share{
     background-color: #2fa99f;
@@ -360,7 +318,7 @@ a{
 
 .share h2{
     font-family: 'Roboto', Helvetica, Arial, sans-serif;
-    font-size: calc(24px + 2 * ((100vw - 320px) / 680));
+    font-size: calc(18px + 2 * ((100vw - 320px) / 680));
     text-align: center;
     color: white;
     padding-top: 7px;
@@ -370,6 +328,90 @@ a{
     background-color: #ed5621;
 }
 
+
+
+/*FACTS*/
+
+.factsBox{
+    background: url(../images/facts_bg.jpg) 50% no-repeat;
+    background-image: center;
+    background-position: center;
+    background-size: cover;
+    padding-bottom: 50px;
+    padding-top: 50px;
+}
+
+.facts h2{
+    text-align: center;
+    font-family: 'Shadows Into Light', cursive;
+    font-size: calc(24px + 4 * ((100vw - 320px) / 680));
+    color: #161616;
+    border-bottom: 1.5px solid #2fa99f;
+    width: 100px;
+    display: block;
+    margin: auto;
+    margin-bottom: 15px;
+}
+
+.facts p{
+    text-align: justify;
+    font-family: 'Roboto Bold', Helvetica, Arial, sans-serif;
+    font-size: calc(14px + 2 * ((100vw - 320px) / 680));
+    color: #161616;
+    width: 70%;    
+    margin: 0 auto;
+    padding-top: 15px;
+}
+
+
+
+/*ABOUT*/
+
+.aboutBox{
+    background: url(../images/dark_wall.png) 100% repeat;
+    padding-bottom: 50px;
+    padding-top: 50px;
+}
+
+.icon{
+    width: 15%;
+    display: block;
+    margin: auto;
+}
+
+.aboutBox h2{
+    text-align: center;
+    font-family: 'Shadows Into Light', cursive;
+    font-size: calc(20px + 2 * ((100vw - 320px) / 680));
+    color: white;
+    border-bottom: 1.5px solid #ed5621;
+    width: 95px;
+    display: block;
+    margin: auto;
+}
+
+.aboutBox p{
+    text-align: justify;
+    font-family: 'Roboto Light', Helvetica, Arial, sans-serif;
+    font-size: calc(11px + 2 * ((100vw - 320px) / 680));
+    color: white;
+    width: 70%;    
+    display: block;
+    margin: auto;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+@media (max-width: 700px) {
+    .icon{
+        width: 20%;
+    }
+}
+
+
+
+/*GET INVOLVED*/
+
 .involvedBox{
     background-color: #e6e6e6;
 }
@@ -377,13 +419,13 @@ a{
 .newEvents h2{
     text-align: center;
     font-family: 'Shadows Into Light', cursive;
-    font-size: calc(24px + 4 * ((100vw - 320px) / 680));
+    font-size: calc(20px + 4 * ((100vw - 320px) / 680));
     color: #161616;
     border-bottom: 1.5px solid #ed5621;
-    width: 200px;
+    width: 180px;
     display: block;
     margin: auto;
-    padding-top: 30px;
+    padding-top: 50px;
     margin-bottom: 25px;
 }
 
@@ -425,13 +467,13 @@ a{
 .socialBox h2{
     text-align: center;
     font-family: 'Shadows Into Light', cursive;
-    font-size: calc(24px + 4 * ((100vw - 320px) / 680));
+    font-size: calc(20px + 4 * ((100vw - 320px) / 680));
     color: white;
     border-bottom: 1.5px solid #ed5621;
-    width: 200px;
+    width: 180px;
     display: block;
     margin: auto;
-    padding-top: 35px;
+    padding-top: 50px;
     margin-bottom: 25px;
 }
 
@@ -465,6 +507,10 @@ a{
         margin-bottom: 35px;
     }
 }
+
+
+
+/*FOOTER*/
 
 .footerBox{
     background-color: #161616;
