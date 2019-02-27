@@ -15,13 +15,15 @@
 
 <body>
 
+    <div id="app">
+
     <?php include('templates/header.php');?>
 
-    <div id="app">
     <router-view></router-view>
-    </div>
 
     <?php include('templates/footer.php');?>
+
+    </div>
 
     <script src="js/vendor/jquery.js"></script>
     <script src="js/vendor/what-input.js"></script>

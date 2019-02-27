@@ -2,20 +2,20 @@ export default {
     template: `
     <div>
     <section class="large-12 medium-12 small-12 columns">  
-  <div class="greenBox"><div>
+  <div class="greenBox"></div>
 </section>
 
 <section class="bannerBox large-12 medium-12 small-12 columns" id="bannerBox">  
       <div class="banner large-12 medium-12 small-12 align-center columns hide-for-small-only">
-      <img src="images/michael.jpg" id="michael">
+      <img :src="banner" id="michael">
       </div>
       <div class="banner large-12 medium-12 small-12 align-center columns show-for-small-only">
-          <img src="images/michael_mobile.jpg" id="michael">
+          <img :src="bannerMobile" id="michael">
       </div>
 </section>
 
 <section class="large-12 medium-12 small-12 columns">  
-  <div class="greenBox"><div>
+  <div class="greenBox"></div>
 </section>
 
 <section class="videoBox large-12 medium-12 small-12 columns" id="videoBox"> 
@@ -40,7 +40,7 @@ export default {
 <section class="large-12 medium-12 small-12 columns">  
     <a href="#"><div class="signUp">
     <h2>SIGN UP TO BE A DONOR NOW</h2>
-    <div></a>
+    </div></a>
 </section>
 
 <section class="donationBox large-12 medium-12 small-12 columns" id="donationBox">
@@ -68,7 +68,7 @@ export default {
 <section class="large-12 medium-12 small-12 columns">  
   <a href="#"><div class="share">
   <h2>SHARE YOUR STORY</h2>
-  <div></a>
+  </div></a>
 </section>
 
 <section class="factsBox large-12 medium-12 small-12 columns" id="factsBox">
@@ -130,9 +130,18 @@ export default {
         <a href="#"><img src="images/instagram.svg" class="socialIcon"></img></a>
         <p>Visit our shop:</p>
         <a href="#"><p>www.thanks2one.com/shop</p></a>
-      </div>
+      </div></div>
   </div>
 </section>
     </div>`,
+
+
+    data () {
+      return {
+        banner : 'images/michael.jpg',
+        bannerMobile : 'images/michael_mobile.jpg',
+        
+      }
+    }
 
 }
