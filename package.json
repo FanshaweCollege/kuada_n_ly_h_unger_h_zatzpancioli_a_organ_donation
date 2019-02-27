@@ -4,12 +4,12 @@
   "description": "Ontario Organ Donation Project",
   "main": "gulpfile.js",
   "dependencies": {
-    "dependencies": "0.0.1",
-    "node-sass": "^4.11.0"
+    "dependencies": "0.0.1"
   },
   "devDependencies": {
     "gulp": "^4.0.0",
-    "gulp-sass": "^4.0.2"
+    "gulp-sass": "^4.0.2",
+    "node-sass": "^4.11.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

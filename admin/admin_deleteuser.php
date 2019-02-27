@@ -20,6 +20,7 @@
     <title>Create User</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type='text/css' media="screen" href="../css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400|Oswald:200,400,600|Roboto" rel="stylesheet">
     <script src="../js/main.js"></script>
 </head>
 <body>

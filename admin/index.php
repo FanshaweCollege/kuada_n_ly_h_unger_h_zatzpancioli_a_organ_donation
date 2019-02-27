@@ -3,22 +3,18 @@
 	confirm_logged_in();
 	greeting();
 	$message = greeting();
-
-	if (isset($_SESSION['user_date']) && 
-		(time() - $_SESSION['user_date'] > 600)) {
-		session_destroy();   
-		session_unset();  
-	 }
-	 
-	$_SESSION['user_date'] = time();
 ?>
 
 <!doctype html>
 <html>
 <head>
 	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Welcome <?php echo $_SESSION['user_name'] ?></title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../css/main.css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400|Oswald:200,400,600|Roboto" rel="stylesheet">
+	<script src="../js/main.js"></script>
 </head>
 <body>
 
