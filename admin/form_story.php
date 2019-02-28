@@ -5,11 +5,12 @@
     if(isset($_POST['submit'])){
         $name = trim($_POST['name']);
         $email = trim($_POST['email']);
-        $story = trim($_POST['story']);
-        if(empty($name) || empty($story)){
+        $reason = trim($_POST['reason']);
+        $subject = trim($_POST['subject']);
+        if(empty($name) || empty($subject)){
             $message = 'Please fill the required fields';
         }else{
-            $result = sendStory($name,$email,$story);
+            $result = sendStory($name,$email,$reason,$subject);
             $message = $result;
         }
     }
@@ -36,8 +37,14 @@
         <input type="text" id="name" name="name" placeholder="Your name"><br><br>
         <label for="email">Email:</label>
         <input type="text" id="email" name="email" placeholder="Your email"><br><br>
-        <label for="story">Story:</label>
-        <textarea type="text" id="story" name="story" placeholder="Your story"></textarea><br><br>
+        <label for="reason">Reason for contact:</label>
+        <select name="reason">
+            <option value="Share your story">Share my story</option>
+            <option value="Questions about donation">Questions about donation</option>
+            <option value="Questions about us">Questions about Thanks2One</option>
+        </select><br><br>
+        <label for="story">Subject:</label>
+        <textarea type="text" id="subject" name="subject" placeholder="Your text here..."></textarea><br><br><br><br>
         <button type="submit" name="submit">Submit</button>
     </form>
         
