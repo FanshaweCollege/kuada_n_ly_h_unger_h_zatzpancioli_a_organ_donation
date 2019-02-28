@@ -1,3 +1,19 @@
+<?php
+	require_once('./admin/scripts/config.php');
+    
+    if(isset($_POST['submit'])){
+        $name = trim($_POST['name']);
+        $email = trim($_POST['email']);
+        $reason = trim($_POST['reason']);
+        $subject = trim($_POST['subject']);
+        if(empty($name) || empty($subject)){
+            $message = 'Please fill the required fields';
+        }else{
+            $result = sendStory($name,$email,$reason,$subject);
+            $message = $result;
+        }
+    }
+?>
 
 <!DOCTYPE html>
 <html lang="en">

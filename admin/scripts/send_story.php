@@ -31,11 +31,11 @@ function sendStory($name,$email,$reason,$subject){
     
     if($create_story_set->rowCount()){
 
-      $message = 'Thank you for contacting us!';
+      $message = 'Thank you for sending us your story!';
       return $message;
 		
     }else{
-      $message = "Something went wrong!";
+      $message = "Story couldn't be sent!";
       return $message;
     }
       

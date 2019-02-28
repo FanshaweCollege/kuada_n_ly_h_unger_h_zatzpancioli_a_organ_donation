@@ -6,5 +6,6 @@ require_once('sessions.php');
 require_once('user.php');
 require_once('edituser.php');
 require_once('deleteuser.php');
+require_once('send_story.php');
 
 ?>
