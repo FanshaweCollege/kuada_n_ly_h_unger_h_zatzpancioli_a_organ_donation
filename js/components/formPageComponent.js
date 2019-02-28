@@ -4,7 +4,7 @@ export default {
         <?php if(!empty($message)):?>
         <p><?php echo $message;?></p>
         <?php endif?>
-        <h3>Have any questions or want to share your story? <br>Thanks 2 One team is always ready to help you!</h3>
+        <h3>{{ mainMessage }}</h3>
         <form action="index.php#" method="POST">
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" placeholder="Your name">
@@ -21,5 +21,11 @@ export default {
             <button type="submit" name="submit">Submit</button>
         </form>
     </div>`,
+
+    data () {
+        return {
+          mainMessage : "Have any questions or want to share your story? Thanks 2 One team is always ready to help you!"
+        }
+      },
 
 }
