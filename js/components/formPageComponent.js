@@ -5,7 +5,7 @@ export default {
         <p><?php echo $message;?></p>
         <?php endif?>
         <h2>Share your story</h2>
-        <form action="form_story.php" method="POST">
+        <form action="index.php#" method="POST">
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" placeholder="Your name"><br><br>
             <label for="email">Email:</label>
