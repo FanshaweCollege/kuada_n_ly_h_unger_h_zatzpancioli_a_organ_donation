@@ -11,7 +11,7 @@
           <li><a href="#factsBox">Facts</li></a>
           <li><a href="#aboutBox">About Us</li></a>
           <li><a href="#involvedBox">Get Involved</li></a>
-          <li><router-link :to="{name:'adminLogin'}">Stories</li></router-link>
+          <li><a href="#"></li></a>
           <li><a href="#">Contact Us</li></a>
         </ul>
       </section>
