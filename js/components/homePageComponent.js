@@ -74,7 +74,7 @@ export default {
 </section>
 
 <section class="share large-12 medium-12 small-12 columns">  
-  <a href="#"><h2>SHARE YOUR STORY</h2></a>
+<router-link :to="{name:'form'}"><h2>SHARE YOUR STORY</h2></router-link>
 </section>
 
 <section class="factsBox large-12 medium-12 small-12 columns" id="factsBox">
