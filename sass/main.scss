@@ -552,3 +552,105 @@ a{
         margin-bottom: 45px;
     }
 }
+
+
+
+
+//admin login
+
+.adminContainer{
+    background-color: white;
+    color: #161616;
+    font-family: 'Roboto', Helvetica, Arial, sans-serif;;
+}
+
+#loginContainer{
+    width: 400px;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 40px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    border: 2px solid #2fa99f;
+}
+
+#dashContainer{
+    width: 800px;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 20px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.adminContainer a{
+    text-decoration: underline;
+    color: #161616;
+}
+
+.adminContainer a:hover{
+    color: #ed5621;
+}
+
+.adminContainer h1{
+    text-align: center;
+    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+    color: #2fa99f;
+}
+
+.adminContainer h2{
+    text-align: center;
+    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+    padding-top: 20px;
+}
+
+.adminContainer ul li{
+    display: inline-block;
+    padding-top: 40px;
+    padding-right: 30px;
+    padding-left: 30px;
+}
+
+.adminContainer ul{
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+}
+
+.adminContainer form{
+    text-align: center;
+    padding-top: 40px;
+}
+
+.adminContainer textarea{
+    background: none;
+}
+
+.adminContainer label{
+    display: block;
+    padding-bottom: 20px;
+}
+
+#last_login{
+    text-align: center;
+    margin-top: 100px;
+}
+
+#greeting{
+    text-align: center;
+    color: #ed5621;
+}
+
+#error{
+    text-align: center;
+    padding-top: 20px;
+}
+
+#dashTitle{
+    margin-bottom: 40px;
+}
+
+#dashWelcome{
+    margin-bottom: 0px;
+}

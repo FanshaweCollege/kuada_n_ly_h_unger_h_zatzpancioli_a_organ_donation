@@ -117,9 +117,8 @@ export default {
   <div class="involved large-offset-1 large-10 large-offset-1 medium-12 small-12 columns">
     <div class="newEvents large-6 medium-6 small-12 columns">
       <h2>News and Events</h2>
-      <img src="images/event_poster.jpg" class="poster">
-      <p>Organ Donation Event | Saturday 25 May 2019 | Victoria Park - London, ON | Registration Truck | Lectures | Live Music | Food Trucks | Graffiti & Street Art Exhibition.
-      </p>
+      <img :src="news" class="poster">
+      <p>{{ newsText }}</p>
     </div>
     <div class="socialBox large-5 large-offset-1 medium-5 medium-offset-1 small-12 columns">
       <div id="social">
@@ -140,8 +139,9 @@ export default {
       return {
         banner : 'images/michael.jpg',
         bannerMobile : 'images/michael_mobile.jpg',
-        
+        news : 'images/event_poster.jpg',
+        newsText : "Organ Donation Event | Saturday 25 May 2019 | Victoria Park - London, ON | Registration Truck | Lectures | Live Music | Food Trucks | Graffiti & Street Art Exhibition.",
       }
-    }
+    },
 
 }
