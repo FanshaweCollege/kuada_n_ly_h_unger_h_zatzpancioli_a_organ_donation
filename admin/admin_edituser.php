@@ -1,5 +1,5 @@
 <?php
-    require_once('scripts/config.php');
+    require_once('./scripts/config.php');
     confirm_logged_in();
 
     $id = $_SESSION['user_id'];
