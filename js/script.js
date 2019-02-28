@@ -4,6 +4,8 @@
     let 
         btButton        = document.querySelector('.back-top'),
         animatedObject  = document.querySelectorAll('.js-animation'),
+        animatedObject2  = document.querySelectorAll('.js-animation2'),
+        animatedObject3  = document.querySelectorAll('.js-animation3'),
         windowHeight    = window.innerHeight;
 
 
