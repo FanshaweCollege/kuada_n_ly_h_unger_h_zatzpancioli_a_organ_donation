@@ -27,7 +27,7 @@ export default {
         <div id="youCanBox">
         <h1>YOU CAN BECOME THE ONE.</h1>
         <h1>BECOME AN ORGAN DONOR.</h1>
-        <h2>Donate Lifes!</h2>
+        <h2>Donate Lives!</h2>
         <p>#THANKS2ONE</p>
         </div>
     </div>
@@ -131,10 +131,10 @@ export default {
       <div id="social">
         <h2>Spread the Word</h2>
         <p>Follow us on:</p>
-        <a href="#"><img src="images/facebook.svg" class="socialIcon"></img></a>
-        <a href="#"><img src="images/instagram.svg" class="socialIcon"></img></a>
-        <a href="#"><img src="images/twitter.svg" class="socialIcon"></img></a>
-        <a href="#"><img src="images/youtube.svg" class="socialIcon"></img></a>
+        <a href="https://www.facebook.com/"><img src="images/facebook.svg" class="socialIcon"></img></a>
+        <a href="https://www.instagram.com/"><img src="images/instagram.svg" class="socialIcon"></img></a>
+        <a href="https://twitter.com/"><img src="images/twitter.svg" class="socialIcon"></img></a>
+        <a href="https://www.youtube.com/"><img src="images/youtube.svg" class="socialIcon"></img></a>
         <p>Visit our shop:</p>
         <a href="#"><p>www.thanks2one.com/shop</p></a>
       </div>
