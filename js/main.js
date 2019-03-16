@@ -16,9 +16,23 @@ const routes = [
     { path: "/admin_deleteuser", name: "adminDeleteuser", component: adminDeleteuserComponent }*/
 ];
 
+var scrollBehavior = function(to, from, savedPosition) {
+    if (to.hash) {
+      return {
+        selector: to.hash
+      }
+    } else {
+      return {
+        x: 0,
+        y: 0
+      }
+    }
+  };
+
 const router = new VueRouter({
 
-    routes
+    routes,
+    scrollBehavior: scrollBehavior
 
 });
 

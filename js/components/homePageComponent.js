@@ -2,8 +2,8 @@ export default {
     template: `
     <div>
     <section class="large-12 medium-12 small-12 columns">  
-  <div class="greenBox"></div>
-</section>
+      <div class="greenBox"></div>
+    </section>
 
 <section class="bannerBox large-12 medium-12 small-12 columns" id="bannerBox">  
       <div class="banner large-12 medium-12 small-12 align-center columns hide-for-small-only">
