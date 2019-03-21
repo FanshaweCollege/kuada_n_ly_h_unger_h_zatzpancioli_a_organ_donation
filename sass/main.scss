@@ -787,3 +787,11 @@ margin-bottom: 2%;
     font-size: calc(18px + 2 * ((100vw - 320px) / 680));
     text-align: center;
 }
+
+.success{
+    background-color: greenyellow;
+}
+
+.error{
+    background-color: red;
+}
