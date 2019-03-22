@@ -795,3 +795,71 @@ margin-bottom: 2%;
 .error{
     background-color: red;
 }
+
+
+
+
+
+//stories
+
+#storiesForm{
+    button{
+        background: $darkgrey;
+        color: $white;
+        padding: 2%;
+        cursor: pointer;
+        margin-bottom: 5%;
+    }
+}
+
+#storiesFormTitle{
+    padding-bottom: 2%;
+}
+
+#storiesFormContainer{
+    color: $white;
+    width: 100%;
+    height: auto;
+    background: $orange;
+    padding-top: 5%;
+    padding-bottom: 3%;
+    label{
+        color: $white;
+    }
+}
+
+.columns:last-child:not(:first-child) {
+    float: none;
+}
+
+#storiesMain{
+    h3{
+        margin-top: 3%;
+        margin-bottom: 1%;
+        font-family: $open;
+        font-size: calc(46px + (46 - 30) * ((100vw - 300px) / (1600 - 300)));
+    }
+    h4{
+        margin-bottom: 3%;
+        font-family: $open;
+        font-size: calc(18px + (18 - 12) * ((100vw - 300px) / (1600 - 300)));
+    }
+    p{
+        margin-bottom: 5%;
+        font-family: $open;
+        font-size: calc(14px + (14 - 10) * ((100vw - 300px) / (1600 - 300)));
+    }
+}
+
+#stories{
+    margin-bottom: 5%;
+}
+
+#storyIntro{
+    margin-top: 3%;
+    margin-bottom: 5%;
+}
+
+#storyText{
+    margin-bottom: 5%;
+}
