@@ -19,19 +19,6 @@
     
     }
 
-    function sendMail($username,$fname,$email,$pass){
-
-        $to = $email;
-            $subject = "Welcome '.$fname.'! Your account is ready!";
-            $message = 'Follow your account and login information:<br>
-        Username: '.$username.'<br>
-        Password: '.$pass.'<br>
-        To log in, please go to www.ZatzPancioli_A_3014_r1/admin/admin_login.php';
-
-        mail($to,$subject,$message);
-
-    }
-
     function greeting(){
 
         date_default_timezone_set('America/Toronto');
