@@ -19,13 +19,13 @@ export default {
 
         <div class="row">
             <div id="stories" class="large-10 large-offset-1 medium-10 medium-offset-1 small-10 small-offset-1 columns text-center">
-                <router-link :to="{name:'story'}">
+                <div v-for="story in storyList" :data-id="story.story_id" v-on:click="loadStory">
                     <div id="story">
-                        <h4>Little text</h4>
-                        <img src="" alt="Story" id="storyImg">
-                        <p>Name</p>
+                        <h4>{{story.story_title}}</h4>
+                        <img :src="'./images/'+ story.story_img" alt="Story" id="storyImg">
+                        <p>{{story.story_author}}</p>
                     </div>
-                </router-link>
+                </div>
             </div>
         </div>
 
@@ -46,5 +46,33 @@ export default {
             </div>
         </div>
     </div>`,
+
+    data() {
+        return {
+            storyList: []
+        }
+    },
+
+    created: function(){
+        this.getStories();
+    },
+    
+    methods: {
+        getStories(){
+            let url = `./admin/scripts/story.php?getstories=true`;
+
+            fetch(url)
+                .then(res => res.json())
+                .then(data => {this.storyList = data})
+            .catch(function(error) {
+                console.error(error);
+            });
+        },
+
+        loadStory(e){
+            let id = e.currentTarget.dataset.id;
+            this.$router.push({ path: `story/${id}` });
+        }
+    }
 
 }
