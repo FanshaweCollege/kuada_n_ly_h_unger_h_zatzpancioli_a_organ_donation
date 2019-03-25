@@ -2,8 +2,8 @@ export default {
     template: `
     <div>
     <section class="large-12 medium-12 small-12 columns">  
-  <div class="greenBox"><div>
-</section>
+      <div class="greenBox"></div>
+    </section>
 
 <section class="bannerBox large-12 medium-12 small-12 columns" id="bannerBox">  
       <div class="banner large-12 medium-12 small-12 align-center columns hide-for-small-only">
@@ -15,7 +15,7 @@ export default {
 </section>
 
 <section class="large-12 medium-12 small-12 columns">  
-  <div class="greenBox"><div>
+  <div class="greenBox"></div>
 </section>
 
 <section class="videoBox large-12 medium-12 small-12 columns" id="videoBox"> 
@@ -25,10 +25,10 @@ export default {
     </div>
     <div class="youCan large-offset-1 large-5 medium-offset-1 medium-5 small-12 columns wow fadeInDown" data-wow-duration="2s" data-wow-delay="1s">
         <div id="youCanBox">
-        <h1>YOU CAN BECOME THE ONE.</h1>
-        <h1>BECOME AN ORGAN DONOR.</h1>
-        <h2>Donate Lives!</h2>
-        <p>#THANKS2ONE</p>
+        <h1>{{ mainMessage1 }}</h1>
+        <h1>{{ mainMessage2 }}</h1>
+        <h2>{{ mainMessage3 }}</h2>
+        <p>{{ mainMessage4 }}</p>
         </div>
     </div>
   </div>
@@ -48,7 +48,7 @@ export default {
 </section>
 
 <section class="signUp large-12 medium-12 small-12 columns">  
-  <a href="#"><h2>SIGN UP TO BE A DONOR NOW</h2></a>
+  <a href="https://www.ontario.ca/page/organ-and-tissue-donor-registration?utm_source=so&utm_medium=keyword&utm_campaign=original"><h2>SIGN UP TO BE A DONOR NOW</h2></a>
 </section>
 
 <section class="donationBox large-12 medium-12 small-12 columns" id="donationBox">
@@ -65,7 +65,7 @@ export default {
     </div>
     <div class="large-4 medium-4 small-12 columns wow fadeInUpBig" data-wow-duration="1s">
       <h2>The Donation Process</h2>
-      <p>To be an organ donor you need to die in hospital in specific circumstances. When this happens, a specialist nurse will check if you’re a registered organ donor.<br> Your family will be expected to support your decision, or they will be asked to make a decision on your behalf.</p>
+      <p>To be an organ donor you need to die in hospital in specific circumstances. When this happens, a specialist nurse will check if you’re a registered organ donor. Your family will be expected to support your decision, or they will be asked to make a decision on your behalf.</p>
     </div>
   </div>
   <div class="organs large-12 medium-12 small-push-12 align-center columns">
@@ -74,7 +74,7 @@ export default {
 </section>
 
 <section class="share large-12 medium-12 small-12 columns">  
-  <a href="#"><h2>SHARE YOUR STORY</h2></a>
+<router-link :to="{name:'form'}"><h2>SHARE YOUR STORY</h2></router-link>
 </section>
 
 <section class="factsBox large-12 medium-12 small-12 columns" id="factsBox">
@@ -123,9 +123,8 @@ export default {
   <div class="involved large-offset-1 large-10 large-offset-1 medium-12 small-12 columns">
     <div class="newEvents large-6 medium-6 small-12 columns">
       <h2>News and Events</h2>
-      <img src="images/event_poster.jpg" class="poster">
-      <p>Organ Donation Event | Saturday 25 May 2019 | Victoria Park - London, ON | Registration Truck | Lectures | Live Music | Food Trucks | Graffiti & Street Art Exhibition.
-      </p>
+      <img :src="news" class="poster">
+      <p>{{ newsText }}</p>
     </div>
     <div class="socialBox large-5 large-offset-1 medium-5 medium-offset-1 small-12 columns  wow fadeInDown" data-wow-duration="2s">
       <div id="social">
@@ -142,5 +141,18 @@ export default {
   </div>
 </section>
 </div>`,
+
+data () {
+  return {
+    banner : 'images/banner1.jpg',
+    bannerMobile : 'images/banner1_mobile.jpg',
+    news : 'images/new_event_poster.jpg',
+    newsText : "Organ Donation Event | Saturday 25 May 2019 | Victoria Park - London, ON | Registration Truck | Lectures | Live Music | Food Trucks | Graffiti & Street Art Exhibition.",
+    mainMessage1 : "YOU CAN BECOME THE ONE.",
+    mainMessage2 : "BECOME AN ORGAN DONOR.",
+    mainMessage3 : "Donate Lives!",
+    mainMessage4 : "#THANKS2ONE",
+  }
+},
 
 }
