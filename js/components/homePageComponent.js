@@ -24,7 +24,7 @@ export default {
     
     <div class="video large-6 medium-6 small-12 align-center columns">
     <video width="100%" controls>
-    <source src="videos/thanks2one.mp4" type="video/mp4">
+    <source src="video/thanks2one.mp4" type="video/mp4">
     </video>
     </div>
 
