@@ -4009,7 +4009,7 @@ a.thumbnail {
 .small-centered {
   margin-right: auto;
   margin-left: auto; }
-  .small-centered, .small-centered:last-child:not(:first-child) {
+ .small-centered, .small-centered:last-child:not(:first-child) {
     float: none;
     clear: both; }
 
@@ -4223,7 +4223,7 @@ a.thumbnail {
   .medium-centered {
     margin-right: auto;
     margin-left: auto; }
-    .medium-centered, .medium-centered:last-child:not(:first-child) {
+   .medium-centered, .medium-centered:last-child:not(:first-child) {
       float: none;
       clear: both; }
   .medium-uncentered,
@@ -4436,7 +4436,7 @@ a.thumbnail {
   .large-centered {
     margin-right: auto;
     margin-left: auto; }
-    .large-centered, .large-centered:last-child:not(:first-child) {
+   .large-centered, .large-centered:last-child:not(:first-child) {
       float: none;
       clear: both; }
   .large-uncentered,
