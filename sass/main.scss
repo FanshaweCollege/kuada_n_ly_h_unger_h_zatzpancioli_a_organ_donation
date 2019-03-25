@@ -178,8 +178,8 @@ a{
     background-color: $ice;
 }
 
-#video{
-    margin-top: 10%;
+.video{
+    margin-top: 7%;
 }
 
 .youCan{
@@ -203,7 +203,7 @@ a{
 }
 
 @media (max-width: 700px) {
-    #video{
+    .video{
         margin-bottom: 10%;
     }
 }
@@ -660,9 +660,9 @@ margin-bottom: 2%;
 //admin login
 
 .adminContainer{
-    background-color: white;
-    color: #161616;
-    font-family: 'Roboto', Helvetica, Arial, sans-serif;;
+    background-color: $ice;
+    color: $darkgrey;
+    font-family: $open;
 }
 
 #loginContainer{
@@ -672,7 +672,7 @@ margin-bottom: 2%;
     margin-top: 40px;
     padding-top: 40px;
     padding-bottom: 40px;
-    border: 2px solid #2fa99f;
+    border: 2px solid $green;
 }
 
 #dashContainer{
@@ -686,22 +686,22 @@ margin-bottom: 2%;
 
 .adminContainer a{
     text-decoration: underline;
-    color: #161616;
+    color: $darkgrey;
 }
 
 .adminContainer a:hover{
-    color: #ed5621;
+    color: $orange;
 }
 
 .adminContainer h1{
     text-align: center;
-    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
-    color: #2fa99f;
+    font-family: $open;
+    color: $green;
 }
 
 .adminContainer h2{
     text-align: center;
-    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+    font-family: $open;
     padding-top: 20px;
 }
 
@@ -740,7 +740,7 @@ margin-bottom: 2%;
 
 #greeting{
     text-align: center;
-    color: #ed5621;
+    color: $orange;
 }
 
 #error{
@@ -782,18 +782,21 @@ margin-bottom: 2%;
 }
 
 #formContainer h3{
+    margin-top: 5%;
     padding-top: 2%;
     padding-bottom: 2%;
     font-size: calc(18px + 2 * ((100vw - 320px) / 680));
     text-align: center;
 }
 
-.success{
-    background-color: greenyellow;
+.success p{
+    color: $green;
+    font-family: $open;
 }
 
-.error{
-    background-color: red;
+.error p{
+    color: $orange;
+    font-family: $open;
 }
 
 
@@ -826,10 +829,6 @@ margin-bottom: 2%;
     label{
         color: $white;
     }
-}
-
-.columns:last-child:not(:first-child) {
-    float: none;
 }
 
 #storiesMain{

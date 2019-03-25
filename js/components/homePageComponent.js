@@ -19,19 +19,26 @@ export default {
 </section>
 
 <section class="videoBox large-12 medium-12 small-12 columns" id="videoBox"> 
+
   <div class="videoYouCan large-offset-1 large-10 large-offset-1 medium-offset-1 medium-10 medium-offset-1 small-12 columns">
+    
     <div class="video large-6 medium-6 small-12 align-center columns">
-    <img src="images/video.png" id="video">
+    <video width="100%" controls>
+    <source src="videos/thanks2one.mp4" type="video/mp4">
+    </video>
     </div>
+
     <div class="youCan large-offset-1 large-5 medium-offset-1 medium-5 small-12 columns wow fadeInDown" data-wow-duration="2s" data-wow-delay="1s">
-        <div id="youCanBox">
-        <h1>{{ mainMessage1 }}</h1>
-        <h1>{{ mainMessage2 }}</h1>
-        <h2>{{ mainMessage3 }}</h2>
-        <p>{{ mainMessage4 }}</p>
-        </div>
+    <div id="youCanBox">
+    <h1>{{ mainMessage1 }}</h1>
+    <h1>{{ mainMessage2 }}</h1>
+    <h2>{{ mainMessage3 }}</h2>
+    <p>{{ mainMessage4 }}</p>
     </div>
+    </div>
+
   </div>
+
   <div class="beat hidden large-12 medium-12 small-push-12 align-center columns">
     <?xml version="1.0" encoding="utf-8"?>
     <svg version="1.1" id="path" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
