@@ -8,7 +8,7 @@ const routes = [
     { path: "/", name: "homepage", component: homePageComponent },
     { path: "/form", name: "form", component: formPageComponent },
     { path: "/stories", name: "stories", component: storiesPageComponent },
-    { path: "/story", name: "story", component: storyPageComponent },
+    { path: "/story/:id", name: "story", component: storyPageComponent, props:true },
 ];
 
 var scrollBehavior = function(to, from, savedPosition) {
