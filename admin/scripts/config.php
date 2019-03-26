@@ -7,5 +7,8 @@ require_once('user.php');
 require_once('edituser.php');
 require_once('deleteuser.php');
 require_once('email.php');
+require_once('createstory.php');
+require_once('editstory.php');
+require_once('deletestory.php');
 
 ?>
