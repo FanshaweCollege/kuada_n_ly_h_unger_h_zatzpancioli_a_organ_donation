@@ -826,8 +826,18 @@ margin-bottom: 2%;
     background: $orange;
     padding-top: 5%;
     padding-bottom: 3%;
+    display: flex;
+    flex-wrap: wrap;
     label{
         color: $white;
+    }
+    .error, .success{
+        width: 100%;
+        margin: auto;
+        text-align: center;
+        p{
+        color: $white;
+        }
     }
 }
 
