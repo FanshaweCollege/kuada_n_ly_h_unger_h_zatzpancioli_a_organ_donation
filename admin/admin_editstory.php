@@ -56,7 +56,7 @@
             <input type="text" name="name" value="<?php echo $story['story_author'];?>">
         </label>
 		<label>Story:
-            <input type="text" name="story" value="<?php echo $story['story_text'];?>">
+            <input type="text" name="story" value="<?php echo $story['story_text'];?>" id="storyInput">
         </label>
 		<button type="submit" name="submit">Edit Story</button>
         <?php endif; ?>

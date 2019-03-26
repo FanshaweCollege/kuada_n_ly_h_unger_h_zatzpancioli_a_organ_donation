@@ -3,29 +3,24 @@ export default {
     <div id="storiesContainer">
         <div class="row">
 
-            <div id="storiesMain" class="large-10 large-offset-1 medium-10 medium-offset-1 small-10 small-offset-1 columns text-center">
+            <div id="storiesMain" class="large-8 large-offset-2 medium-8 medium-offset-2 small-10 small-offset-1 columns text-center">
                 <h3>Organ Donation Stories</h3>
                 <h4>Read stories of those whose lives have been affected by organ donation and transplant.</h4>
                 <p>We know that the power of organ donation is best told through personal stories. So, we've collected stories of transplant recipients, donor families, and those closest to them to show how transplant and organ donation makes a difference throughout Ontario.</p>
             </div>
         </div>
 
-        <!-- Hey Helen, it is a little raw still, but this would be the bones of the page,
-        below there would be a link leading to the page of the specific story you click on.
-        Do you think that's possible? If not let me know and we can change it!
-        And on the bottom, a form so you can submit your own story. I haven't changed much
-        on the form, just copied it from the contact form, minus the vue stuff. Maybe we
-        could add a place to send a photo? -->
-
         <div class="row">
-            <div id="stories" class="large-10 large-offset-1 medium-10 medium-offset-1 small-10 small-offset-1 columns text-center">
-                <div v-for="story in storyList" :data-id="story.story_id" v-on:click="loadStory">
-                    <div id="story">
-                        <h4>{{story.story_title}}</h4>
-                        <img :src="'./images/'+ story.story_img" alt="Story" id="storyImg">
-                        <p>{{story.story_author}}</p>
-                    </div>
-                </div>
+            <div class="large-8 large-offset-2 medium-10 medium-offset-1 small-10 small-offset-1 columns text-center align-center">
+                <ul id="stories">
+                    <li v-for="story in storyList" :data-id="story.story_id" v-on:click="loadStory">
+                        <div id="story">
+                            <img :src="'./images/'+ story.story_img" alt="Story" id="storyImg">
+                            <h4>{{story.story_title}}</h4>
+                            <p>{{story.story_author}}</p>
+                        </div>
+                    </li>
+                </ul>
             </div>
         </div>
 
