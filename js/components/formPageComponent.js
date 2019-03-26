@@ -18,18 +18,18 @@ export default {
             <input v-model="input.email" type="text" id="email" name="email" placeholder="Your email">
             <label for="reason">Reason for contact:</label>
             <select name="reason" v-model="input.reason">
-                <option value="Questions about donation">Questions about donation</option>
-                <option value="Questions about us">Questions about Thanks2One</option>
+                <option value="Questions about donation">Question about donation</option>
+                <option value="Questions about us">Question about Thanks2One</option>
             </select>
             <label for="story">Subject:</label>
-            <textarea v-model="input.message" type="text" id="subject" name="subject" placeholder="Your text here..."></textarea>
+            <textarea v-model="input.message" type="text" id="subject" name="subject" placeholder="Ask your question!"></textarea>
             <button v-on:click.prevent="submit" type="submit" name="submit">Submit</button>
         </form>
     </div>`,
 
     data () {
         return {
-          mainMessage : "Have any questions or want to share your story? Thanks 2 One team is always ready to help you!",
+          mainMessage : "Have any questions? Thanks 2 One team is always ready to help you!",
           input:{
               name: '',
               email: '',
