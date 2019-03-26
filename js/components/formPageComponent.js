@@ -18,7 +18,6 @@ export default {
             <input v-model="input.email" type="text" id="email" name="email" placeholder="Your email">
             <label for="reason">Reason for contact:</label>
             <select name="reason" v-model="input.reason">
-                <option value="Share your story">Share my story</option>
                 <option value="Questions about donation">Questions about donation</option>
                 <option value="Questions about us">Questions about Thanks2One</option>
             </select>
