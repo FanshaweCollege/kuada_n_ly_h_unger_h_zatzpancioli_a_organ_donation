@@ -33,15 +33,24 @@ export default {
             <div id="storiesFormTitle" class="large-6 large-offset-3 medium-8 medium-offset-2 small-10 small-offset-1 columns text-center">
                 <h3>Share your own experience!</h3>
             </div>
+
+            <div v-if="mailMsg == 'success'" class="success">
+            <p>Your email was sent!</p>
+            </div>
+    
+            <div v-if="mailMsg != 'success'" class="error">
+            <p>{{mailMsg}}</p>
+            </div>
+
             <div id="storiesForm" class="large-6 large-offset-3 medium-8 medium-offset-2 small-10 small-offset-1 columns">
             <form action="index.html" method="POST">
                 <label for="name">Name:</label>
-                <input type="text" id="name" name="name" placeholder="Your name">
+                <input type="text" v-model="input.name" id="name" name="name" placeholder="Your name">
                 <label for="email">Email:</label>
-                <input type="text" id="email" name="email" placeholder="Your email">
-                <label for="story">Subject:</label>
-                <textarea type="text" id="subject" name="subject" placeholder="Your text here..."></textarea>
-                <button type="submit" name="submit">Submit</button>
+                <input type="text" v-model="input.email" id="email" name="email" placeholder="Your email">
+                <label for="story">Story:</label>
+                <textarea type="text" v-model="input.message" id="story" name="story" placeholder="Your text here..."></textarea>
+                <button v-on:click.prevent="submit" type="submit" name="submit">Submit</button>
             </form>
             </div>
         </div>
@@ -49,7 +58,15 @@ export default {
 
     data() {
         return {
-            storyList: []
+            storyList: [],
+            input:{
+                name: '',
+                email: '',
+                reason: 'Sharing A Story',
+                message: ''
+            },
+
+            mailMsg: ''
         }
     },
 
@@ -72,6 +89,49 @@ export default {
         loadStory(e){
             let id = e.currentTarget.dataset.id;
             this.$router.push({ path: `story/${id}` });
+        },
+
+        submit(){
+            if(this.input.name != "" && this.input.email != "" && this.input.reason != "" && this.input.message !=""){
+
+                let url =  `./admin/send_mail.php`;
+
+                const formData = new FormData();
+
+                formData.append("name", this.input.name);
+                formData.append("email", this.input.email);
+                formData.append("reason", this.input.reason);
+                formData.append("message", this.input.message);
+
+                fetch(url, {
+                    method: 'POST',
+                    body: formData
+                })
+                .then(res=>res.json())
+                .then(data =>{
+                    if ( data == "failed"){
+                        console.warn(data);
+                        console.log('email failed');
+                        this.mailMsg = "sending failed, please try again later!";
+                        return;
+                    }else{
+                        this.$router.push({path: '/stories'});
+                        console.log(data);
+                        this.mailMsg = "success";
+
+                        //empty the form
+                        this.input.name = '';
+                        this.input.email = '';
+                        this.input.message = '';
+                    }
+                })
+                .catch(function(error){
+                    console.log(error);
+                });
+
+            }else{
+                this.mailMsg = "Fields cannot be blank!";
+            }
         }
     }
 
